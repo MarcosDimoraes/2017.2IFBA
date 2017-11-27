@@ -13,7 +13,8 @@ int main(){
 		v[i]=i;
 	}
 	inicio=(double) clock()/CLOCKS_PER_SEC;
-	i = sequencial(rand()%TAM);	
+	//i = sequencial(rand()%TAM);	
+	i=sequencial(TAM);
 	fim=(double) clock()/CLOCKS_PER_SEC;
 	printf("tempo sequencial:%f\ni:%d\n",fim-inicio,i);
 	inicio=(double) clock()/CLOCKS_PER_SEC;
@@ -28,7 +29,7 @@ int sequencial(int busca){
 		if(busca==v[i])
 			achei=1;
 	}
-	return (i<TAM)?i:-1;
+	return (achei)?i:-1;
 }
 int binaria(int busca){
 	int inicio=0;
